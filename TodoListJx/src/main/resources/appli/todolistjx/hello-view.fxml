@@ -1,16 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-
 <?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="appli.todolistjx.HelloController">
-  <padding>
-    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-  </padding>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 
-  <Label fx:id="welcomeText"/>
-  <Button text="Hello!" onAction="#onHelloButtonClick"/>
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="appli.todolistjx.HelloController">
+  <padding>
+    <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
+  </padding>
+   <Label text="Bienvenu ! ">
+      <font>
+         <Font name="System Bold Italic" size="21.0" />
+      </font>
+   </Label>
+   <Label text="Votre email : " />
+   <TextField alignment="CENTER" />
+   <Label text="Votre Mot de Passe : " />
+   <PasswordField onAction="#onErrorButton" />
+   <Label fx:id="errorText" text="Erreur" textFill="RED" />
+   <Button mnemonicParsing="false" text="Connexion" />
+   <Button mnemonicParsing="false" text="Mot de Passe Oublié" />
+  <Button onAction="#onHelloButtonClick" text="Inscription" />
+
+  <Label fx:id="welcomeText" />
 </VBox>
