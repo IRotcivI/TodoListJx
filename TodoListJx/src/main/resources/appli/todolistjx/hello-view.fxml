@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.0" spacing="20.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/22" fx:controller="appli.todolistjx.HelloController">
+<VBox alignment="CENTER" prefHeight="200.0" prefWidth="170.0" spacing="20.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.todolistjx.HelloController">
   <padding>
     <Insets bottom="20.0" left="20.0" right="20.0" top="30.0" />
   </padding>
@@ -20,11 +20,10 @@
    <Label text="Votre email : " />
    <TextField alignment="CENTER" />
    <Label text="Votre Mot de Passe : " />
-   <PasswordField onAction="#onErrorButton" />
-   <Label fx:id="errorText" text="Erreur" textFill="RED" />
-   <Button mnemonicParsing="false" text="Connexion" />
+   <PasswordField />
+   <Label fx:id="errorText" textFill="RED" />
+   <Button mnemonicParsing="false" onAction="#onErrorButton" text="Connexion" />
    <Button mnemonicParsing="false" text="Mot de Passe Oublié" />
   <Button onAction="#onHelloButtonClick" text="Inscription" />
-
   <Label fx:id="welcomeText" />
 </VBox>
