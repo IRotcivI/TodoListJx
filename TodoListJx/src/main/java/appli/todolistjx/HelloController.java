@@ -13,7 +13,7 @@ public class HelloController {
     @FXML
     protected void onHelloButtonClick() {
         welcomeText.setText("Welcome to JavaFX Application!");
-        System.out.println(onHelloButtonClick());
+        System.out.println();
     }
 
     @FXML
@@ -27,7 +27,7 @@ public class HelloController {
         {
             errorText.setText("");
         }
-        System.out.println(onErrorButton(););
+        System.out.println();
     }
 
 

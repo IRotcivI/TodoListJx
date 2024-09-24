@@ -8,16 +8,20 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class HelloApplication extends Application {
+    private Stage mainStage;
     @Override
     public void start(Stage stage) throws IOException {
+        this.mainStage = stage;
         FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
         Scene scene = new Scene(fxmlLoader.load(), 170, 400);
-        stage.setTitle("JavaFX!");
-        stage.setScene(scene);
-        stage.show();
+        this.mainStage.setTitle("JavaFX!");
+        this.mainStage.setScene(scene);
+        this.mainStage.show();
     }
 
     public static void main(String[] args) {
         launch();
     }
+
+
 }
