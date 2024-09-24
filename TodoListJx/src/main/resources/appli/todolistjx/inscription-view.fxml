@@ -1,14 +1,30 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="appli.todolistjx.InscriptionView"
-            prefHeight="400.0" prefWidth="600.0">
 
+<AnchorPane prefHeight="480.0" prefWidth="250.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="appli.todolistjx.InscriptionView">
+   <children>
+      <Label layoutX="73.0" layoutY="14.0" text="Inscription !">
+         <font>
+            <Font name="System Bold Italic" size="21.0" />
+         </font>
+      </Label>
+      <Label layoutX="114.0" layoutY="69.0" text="Nom : " />
+      <Label layoutX="107.0" layoutY="132.0" text="Prenom : " />
+      <Label layoutX="96.0" layoutY="260.0" text="Mot de Passe" />
+      <Label layoutX="97.0" layoutY="323.0" text="Confirmation :" />
+      <Label layoutX="113.0" layoutY="200.0" text="Email : " />
+      <TextField alignment="CENTER" layoutX="57.0" layoutY="93.0" />
+      <TextField alignment="CENTER" layoutX="57.0" layoutY="159.0" />
+      <TextField alignment="CENTER" layoutX="57.0" layoutY="223.0" />
+      <TextField alignment="CENTER" layoutX="57.0" layoutY="285.0" />
+      <TextField alignment="CENTER" layoutX="57.0" layoutY="355.0" />
+      <Button layoutX="89.0" layoutY="399.0" mnemonicParsing="false" text="Inscription" />
+      <Button layoutX="99.0" layoutY="443.0" mnemonicParsing="false" text="Retour" />
+   </children>
 </AnchorPane>
