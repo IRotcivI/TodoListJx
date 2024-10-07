@@ -1,6 +1,6 @@
 package repository;
 
-import model.utilisateur;
+import model.Utilisateur;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -9,7 +9,7 @@ import java.sql.SQLException;
 
 public class UtilisateurRepository {
 
-    public boolean inscription (utilisateur utilisateur) throws SQLException {
+    public boolean inscription (Utilisateur utilisateur) throws SQLException {
         Connection maConnection = DriverManager.getConnection(
                 "jdbc:mysql://localhost:3307/javafx","root",""
         );

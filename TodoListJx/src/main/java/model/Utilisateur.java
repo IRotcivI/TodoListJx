@@ -1,14 +1,13 @@
 package model;
 
-public class utilisateur {
+public class Utilisateur {
     private int id;
     private String nom;
     private String prenom;
     private String email;
     private String password;
 
-    public utilisateur(int id ,String nom, String prenom, String email, String password) {
-        this.id = id;
+    public Utilisateur(String nom, String prenom, String email, String password) {
         this.nom = nom;
         this.prenom = prenom;
         this.email = email;
