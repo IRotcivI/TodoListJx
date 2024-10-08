@@ -1,6 +1,8 @@
 package appli.todolistjx;
 
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
 import javafx.scene.control.PasswordField;
@@ -12,15 +14,23 @@ import java.sql.SQLException;
 public class InscriptionController {
 
     @FXML
-    private TextField nom;
-    @FXML
-    private TextField prenom;
+    private TextField conf;
+
     @FXML
     private TextField email;
+
     @FXML
-    private PasswordField motDePasse;
+    private TextField mdp;
+
     @FXML
-    private PasswordField motDePasseConfirmer;
+    private TextField nom;
+
+    @FXML
+    private TextField prenom;
+
+    @FXML
+    private Button register;
+
     @FXML
     private Label labelErreur;
 
@@ -29,13 +39,13 @@ public class InscriptionController {
     }
 
     @FXML
-    public void inscrireUtilisateur() throws SQLException {
+    public void onRegisterClickButton(ActionEvent event) throws SQLException {
 
         String nomUser = nom.getText();
         String prenomUser = prenom.getText();
         String emailUser = email.getText();
-        String motDePasseUser = motDePasse.getText();
-        String motDePasseConfirmerUser = motDePasseConfirmer.getText();
+        String motDePasseUser = mdp.getText();
+        String motDePasseConfirmerUser = conf.getText();
 
         if (champVide(nomUser) || champVide(prenomUser) || champVide(emailUser) || champVide(motDePasseUser) || champVide(motDePasseConfirmerUser)) {
             labelErreur.setText("Veuillez remplir tous les champs !");
@@ -54,6 +64,10 @@ public class InscriptionController {
 
         if (ajoutReussi) {
             labelErreur.setText("Utilisateur ajouté !");
+            nom.clear();
+            prenom.clear();
+            email.clear();
+            mdp.clear();
         } else {
             labelErreur.setText("Erreur !");
         }

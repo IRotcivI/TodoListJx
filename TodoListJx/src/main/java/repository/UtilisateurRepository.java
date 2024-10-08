@@ -11,7 +11,7 @@ public class UtilisateurRepository {
 
     public boolean inscription (Utilisateur utilisateur) throws SQLException {
         Connection maConnection = DriverManager.getConnection(
-                "jdbc:mysql://localhost:3307/javafx","root",""
+                "jdbc:mysql://localhost:3306/javafx","root",""
         );
 
         String nom = utilisateur.getNom();
@@ -21,8 +21,8 @@ public class UtilisateurRepository {
 
         PreparedStatement requetePrepareInsert =
                 maConnection.prepareStatement(
-                        "INSERT INTO utilisateur(nom,prenom,email,mdpmot_de_passe) " +
-                                "VALUES (?,?,?,?,?)"
+                        "INSERT INTO utilisateur(nom,prenom,email,mot_de_passe) " +
+                                "VALUES (?,?,?,?)"
                 );
         requetePrepareInsert.setString(1, nom);
         requetePrepareInsert.setString(2, prenom);
